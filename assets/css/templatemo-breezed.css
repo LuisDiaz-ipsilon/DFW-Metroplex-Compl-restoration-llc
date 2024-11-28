@@ -44,6 +44,14 @@ figure, header, nav, section, article, aside, footer, figcaption {
   outline: 0;
 }
 
+:root {
+  --primary-orange: #FF6A00; /* Dricen Orange */
+  --dark-gray: #333333;
+  --black: #000000;
+  --white: #ffffff;
+}
+
+
 .clearfix:after {
   content: ".";
   display: block;
@@ -82,15 +90,21 @@ header, nav, section, article, aside, footer, hgroup {
 html, body {
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  background-color: #fff;
   font-size: 16px;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--black);
+  color: var(--dark-gray);
 }
 
 a {
   text-decoration: none !important;
+  color: var(--primary-orange);
+}
+
+a:hover {
+  color: var(--dark-gray);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -149,48 +163,51 @@ a.main-stroked-button {
   font-size: 13px;
   border-radius: 25px;
   padding: 11px 25px;
-  background-color: transparent;
-  border: 2px solid #fff;
   text-transform: uppercase;
-  color: #fff;
   font-weight: 600;
   letter-spacing: 1px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  background-color: transparent;
+  border: 2px solid var(--primary-orange);
+  color: var(--primary-orange);
+  transition: all 0.3s ease-in-out;
+
 }
 
 a.main-stroked-button:hover {
-  background-color: #fff;
-  color: #6aaf82;
+  background-color: var(--primary-orange);
+  color: var(--white);
 }
 
 a.main-filled-button {
   font-size: 13px;
   border-radius: 25px;
   padding: 13px 25px;
-  background-color: #fff;
   text-transform: uppercase;
-  color: #398a89;
   font-weight: 600;
   letter-spacing: 1px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  background-color: transparent;
+  border: 2px solid var(--primary-orange);
+  color: var(--primary-orange);
+  transition: all 0.3s ease-in-out;
+
 }
 
 a.main-filled-button:hover {
-  color: #fff;
-  background-color: #398a89;
+  background-color: var(--primary-orange);
+  color: var(--white);
 }
 
 a.main-button-icon {
   font-size: 13px;
   border-radius: 25px;
   padding: 13px 25px;
-  background-color: #398a89;
+  background-color: #FF6A00;
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;
@@ -215,25 +232,25 @@ a.main-button-icon:hover i {
 
 button.main-button {
   outline: none;
-  border: none;
   cursor: pointer;
   font-size: 13px;
   border-radius: 25px;
   padding: 10px 25px;
-  background-color: #fff;
   text-transform: uppercase;
-  color: #398a89;
   font-weight: 600;
   letter-spacing: 1px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  background-color: transparent;
+  border: 2px solid var(--primary-orange);
+  color: var(--primary-orange);
+  transition: all 0.3s ease-in-out;
 }
 
 button.main-button:hover {
-  color: #fff;
-  background-color: #398a89;
+  background-color: var(--primary-orange);
+  color: var(--white);
 }
 
 button.main-button-icon {
@@ -242,7 +259,7 @@ button.main-button-icon {
   font-size: 13px;
   border-radius: 25px;
   padding: 13px 25px;
-  background-color: #398a89;
+  background-color: #FF6A00;
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;
@@ -286,7 +303,7 @@ a.text-button-icon i {
 }
 
 a.text-button-icon:hover {
-  color: #398a89;
+  color: #FF6A00;
 }
 
 a.text-button-icon:hover i {
@@ -334,11 +351,11 @@ header
 }
 
 .background-header .main-nav .nav li:hover a {
-  color: #398a89!important;
+  color: #FF6A00!important;
 }
 
 .background-header .nav li a.active {
-  color: #398a89!important;
+  color: #FF6A00!important;
 }
 
 .header-area {
@@ -352,6 +369,8 @@ header
   -moz-transition: all .5s ease 0s;
   -o-transition: all .5s ease 0s;
   transition: all .5s ease 0s;
+  background-color: var(--black);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 .header-area .main-nav {
@@ -399,7 +418,7 @@ header
 
 .header-area .main-nav .nav .search-icon a {
   background-color: #fff;
-  color: #398a89;
+  color: #FF6A00;
   width: 40px;
   height: 40px;
   display: inline-block;
@@ -419,14 +438,14 @@ header
 
 .header-area .main-nav .nav .search-icon a:hover {
   opacity: 1;
-  color: #398a89!important;
+  color: #FF6A00!important;
 }
 
 .header-area .main-nav .nav li a {
   display: block;
   font-weight: 500;
   font-size: 13px;
-  color: #7a7a7a;
+  color: var(--white);
   text-transform: uppercase;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -439,18 +458,18 @@ header
 }
 
 .header-area .main-nav .nav li a {
-  color: #fff;
+  color: var(--white);
 }
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #fff!important;
+  color: var(--primary-orange);
   opacity: 0.5;
 }
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #398a89!important;
+  color: #FF6A00!important;
   opacity: 1;
 }
 
@@ -511,7 +530,7 @@ header
 
 .header-area .main-nav .nav li.submenu ul li a:hover {
   background: #fff;
-  color: #398a89!important;
+  color: #FF6A00!important;
   padding-left: 25px;
 }
 
@@ -647,7 +666,7 @@ header
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #398a89;
+  color: #FF6A00;
 }
 
 @media (max-width: 1200px) {
@@ -666,7 +685,7 @@ header
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #398a89!important;
+    color: #FF6A00!important;
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
@@ -724,7 +743,7 @@ header
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: #398a89!important;
+    color: #FF6A00!important;
   }
   .header-area .main-nav .nav li.submenu ul {
     position: relative;
@@ -871,7 +890,7 @@ banner
 
 .scroll-down a {
   display: inline-block;
-  background-color: #62adab;
+  background-color: #FF6A00;
   width: 60px;
   height: 60px;
   text-align: center;
@@ -1196,7 +1215,7 @@ testimonials
   font-size: 14px;
   background-color: #fff;
   border-radius: 50%;
-  color: #398a89;
+  color: #FF6A00;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -1205,7 +1224,7 @@ testimonials
 
 #testimonials .item .hover-effect ul li a:hover {
   color: #fff;
-  background-color: #62adab;
+  background-color: #FF6A00;
 }
 
 #testimonials .owl-carousel {
@@ -1259,7 +1278,7 @@ contact
 }
 
 #contact-us .section-heading h6 {
-  color: #62adab;
+  color: #FF6A00;
 }
 
 #contact-us .left-text-content ul li {
@@ -1335,8 +1354,8 @@ footer
 
 footer {
   padding: 80px 0px;
-  background: #62adab;
-  background: linear-gradient(145deg, #62adab 0%, #62adab 100%);
+  background: var(--dark-gray);
+  color: var(--white);
 }
 
 footer .left-text-content p {
@@ -1370,18 +1389,18 @@ footer .right-text-content ul li a {
   text-align: center;
   line-height: 50px;
   font-size: 28px;
-  background-color: #fff;
   border-radius: 50%;
-  color: #62adab;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  background-color: var(--primary-orange);
+  color: var(--white);
 }
 
 footer .right-text-content ul li a:hover {
-  background-color: #62adab;
-  color: #fff;
+  background-color: var(--white);
+  color: var(--primary-orange);
 }
 
 @media (max-width: 992px) {
@@ -1540,7 +1559,7 @@ search
   left: 50%;
   margin-top: 61px;
   margin-left: -45px;
-  background-color: #398a89;
+  background-color: #FF6A00;
   border: black;
 }
 #search .close {
@@ -1549,7 +1568,7 @@ search
   top: 15px;
   right: 15px;
   color: #fff;
-  background-color: #62adab;
+  background-color: #FF6A00;
   outline: none;
   opacity: 1;
   display: inline-block;
@@ -1601,7 +1620,7 @@ portfolio
 }
 #projects .filters ul li.active,
 #projects .filters ul li:hover {
-  color: #398a89;
+  color: #FF6A00;
 }
 #projects .filters-content {
   margin-top: 50px;
@@ -1656,7 +1675,7 @@ portfolio
 }
 
 #projects .section-heading h6 {
-  color: #62adab;
+  color: #FF6A00;
 }
 
 
@@ -1669,4 +1688,35 @@ portfolio
   #projects .section-heading {
     margin-bottom: 0px;
   }
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: var(--dark-gray);
+}
+
+.contact-info li .icon-circle {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-orange);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 20px;
+  color: var(--white);
+}
+
+.contact-info li .icon-circle i {
+  line-height: 1;
 }
